@@ -22,6 +22,8 @@ impl Wilders {
 impl Indicator<f64, Option<f64>> for Wilders {
     fn next(&mut self, input: f64) -> Option<f64> {
         self.index = self.index + 1;
+        println!("index {} sum {}",self.index,self.sum);
+
         if self.index < self.period {
             self.sum = self.sum + input;
             return None;
@@ -29,6 +31,7 @@ impl Indicator<f64, Option<f64>> for Wilders {
         if self.index == (self.period) {
             self.sum = self.sum + input;
             self.prev = self.sum / self.period as f64;
+            println!("index {} sum {}",self.index,self.sum);
             Some(self.prev);
         }
         self.sum = self.sum - self.prev + input;
