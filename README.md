@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/immortalinfidel/wilders-rs.svg?branch=master)](https://travis-ci.com/immortalinfidel/wilders-rs)
+
 # Wilders Smoothing  
 
 ```
