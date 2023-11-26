@@ -1,5 +1,3 @@
-#![feature(external_doc)]
-
 use ta_common::traits::Indicator;
 
 #[doc(include = "../README.md")]
